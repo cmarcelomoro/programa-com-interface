@@ -19,3 +19,5 @@ st.markdown("## Exemplo") ## deixa o texto no tamanho do h2
 st.markdown("### Exemplo") ## deixa o texto no tamanho do h3
 
 st.markdown("> Exemplo") ## deixa com uma barra na frente
+
+st.markdown("---") ## cria uma barra

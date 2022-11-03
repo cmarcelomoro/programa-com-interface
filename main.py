@@ -25,5 +25,3 @@ st.markdown("---") ## cria uma barra
 st.markdown("[Google](https://www.google.com)") ## linkar
 
 st.write("usando o write")
-
-st.table("")

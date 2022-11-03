@@ -21,3 +21,5 @@ st.markdown("### Exemplo") ## deixa o texto no tamanho do h3
 st.markdown("> Exemplo") ## deixa com uma barra na frente
 
 st.markdown("---") ## cria uma barra
+
+st.markdown("[Google](https://www.google.com")

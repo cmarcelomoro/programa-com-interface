@@ -22,4 +22,4 @@ st.markdown("> Exemplo") ## deixa com uma barra na frente
 
 st.markdown("---") ## cria uma barra
 
-st.markdown("[Google](https://www.google.com")
+st.markdown("[Google](https://www.google.com)")

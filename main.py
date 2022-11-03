@@ -10,4 +10,10 @@ st.header("Header")
 
 st.text("Página com interface utilizando streamlit") ## parágrafo
 
-st.markdown("Método que possibilita marcação de alguma palavra, deixando-a em **negrito**")
+st.markdown("Método que possibilita marcação de alguma palavra, deixando-a em **negrito**") ## apenas um asterisco para itálico
+
+st.markdown("# Exemplo") ## deixa o texto no tamanho do h1
+
+st.markdown("## Exemplo") ## deixa o texto no tamanho do h2
+
+st.markdown("### Exemplo") ## deixa o texto no tamanho do h3

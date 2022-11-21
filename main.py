@@ -1,27 +1,35 @@
 import streamlit as st
+import pyodbc as pyodbc
+import streamlit as st
+dados_conexao = (
+    "Driver={SQL Server};"
+    "Server=DESKTOP-H7OJ9TD\SQLEXPRESS;"
+    "Database=Pessoas;"
+    
+)
 
-print('oi')
+def insere():
 
-st.title("Título da página") ##título da página (texto que aparece em cima no começo)
+    nome = input("digite seu nome\n")
+    idade = input("digite sua idade\n")
+    email = input("digite seu email\n")
+    queryInserir = "INSERT INTO pessoas VALUES('"+nome+"',"+idade+",'"+email+"')"
+    cursor.execute(queryInserir)
+    cursor.commit()
+    cursor.close()
+    return print("Inserção bem sucedida")
 
-st.subheader("Subheader") ## subheader da página(aparece abaixo do título)
+def selectAll():
+    for row in cursor.execute("select * from pessoas"):
+         print(row.id, row.nome, row.idade, row.email)
 
-st.header("Header") 
 
-st.text("Página com interface utilizando streamlit") ## parágrafo
+conexao = pyodbc.connect(dados_conexao)
+print("conexao bem sucedida")
 
-st.markdown("Método que possibilita marcação de alguma palavra, deixando-a em **negrito**") ## apenas um asterisco para itálico
+cursor =  conexao.cursor()
 
-st.markdown("# Exemplo") ## deixa o texto no tamanho do h1
 
-st.markdown("## Exemplo") ## deixa o texto no tamanho do h2
-
-st.markdown("### Exemplo") ## deixa o texto no tamanho do h3
-
-st.markdown("> Exemplo") ## deixa com uma barra na frente
-
-st.markdown("---") ## cria uma barra
-
-st.markdown("[Google](https://www.google.com)") ## linkar
-
+st.write(selectAll())
+insere()
 st.write("usando o write")
